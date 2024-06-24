@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #595dae;
+  --sub-color: #000;
+}
+body {
+  font-family: monospace;
+}
+.content {
+  display: flex;
+  justify-content: flex-end;
+}
+.content .search-area {
+  position: fixed;
+  left: 0;
+  width: 40%;
+  height: 100vh;
+  background-color: var(--main-color);
+}
+.content .search-area div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  width: 90%;
+  flex-wrap: wrap;
+}
+.content .search-area div h2 {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 30px;
+}
+.content .search-area .search-input {
+  width: 88%;
+  height: 50px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  color: var(--main-color);
+}
+.content .search-area #search-btn {
+  border: none;
+  cursor: pointer;
+}
+.content .search-area #search-btn i {
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  display: block;
+  background-color: var(--sub-color);
+  font-size: 20px;
+  border: none;
+  text-align: center;
+  line-height: 50px;
+}
+.content .result-area {
+  width: 60%;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+.content .result-area > div {
+  width: 49%;
+}
+.content .result-area .card {
+  box-shadow: 0 4px 20px #ccc;
+  border-radius: 20px;
+}
+.content .result-area .card-img img {
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.content .result-area .card-info {
+  padding: 30px 0;
+  text-align: center;
+}
+.content .result-area .card-info a {
+  display: inline-block;
+  width: 210px;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 25px;
+  padding: 15px 0;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 15px 0;
+  transition: 0.3s;
+}
+.content .result-area .card-info a:hover {
+  background-color: var(--sub-color);
+}
+.showDetails {
+  display: none;
+}
+.content .recipe-details {
+  position: fixed;
+  left: 0;
+  width: 45%;
+  height: 100vh;
+  background-color: var(--main-color);
+  padding: 80px 30px;
+}
+.content .recipe-details i {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+  color: var(--sub-color);
+  right: 20px;
+  top: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+}
+.content .recipe-details > * {
+  margin-bottom: 25px;
+  color: #fff;
+}
+.content .recipe-details h2 {
+  font-size: 35px;
+}
+.content .recipe-details p {
+  font-size: 18px;
+}
