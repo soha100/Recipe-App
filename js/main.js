@@ -11,7 +11,7 @@ resultAreaEl.addEventListener("click", getItemDetail);
 recipeDetails.addEventListener("click", closeDetails);
 function getRecipes() {
   let searchItem = searchInputEl.value.trim();
-  let apiUrl = `https:\\www.themealdb.com/api/json/v1/1/filter.php?c=${searchItem}`;
+  let apiUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${searchItem}`;
 
   fetch(apiUrl)
     .then((res) => {
@@ -47,7 +47,7 @@ function desplayRecipes(recipes) {
 function getItemDetail(e) {
   if (e.target.classList.contains("getRecipe")) {
     let id = e.target.getAttribute("data-id");
-    let apiUrl = `https:\\www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
+    let apiUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
 
     fetch(apiUrl)
       .then((res) => {
